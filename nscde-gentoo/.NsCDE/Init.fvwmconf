@@ -1,0 +1,55 @@
+#
+# This file is a part of the NsCDE - Not so Common Desktop Environment
+# Author: Hegel3DReloaded
+# Licence: GPLv3
+#
+
+# Leave this outside function, contains breaks
+Test (!x $[infostore.terminal]) f_FindApp terminal terminal
+
+# Notice: Common default for Init and Session function
+DestroyFunc CommonInitFunction
+AddToFunc CommonInitFunction
++ I Test (x pnmixer, !f "$[HOME]/.config/autostart/pnmixer.desktop", EnvMatch infostore.nscde_use_stalonetray 1) Exec exec pnmixer
++ I Test (x dex-autostart) Exec exec dex-autostart -e NsCDE --term $[infostore.terminal] -s $[HOME]/.config/autostart -a
++ I Test (!x dex-autostart, x dex) Exec exec dex -e NsCDE --term $[$infostore.terminal] -s $[HOME]/.config/autostart -a
+
+# Do not destroy InitFunction, just append to it
+AddToFunc InitFunction
++ I GotoDeskAndPage 0 0 0
++ I CommonInitFunction
++ I Test (x gkrellm) Exec exec gkrellm
++ I Test (x gkrellm) Wait gkrellm
++ I Test (x gkrellm) Schedule 500 All (Gkrellm) Move screen p $[infostore.gkrellm.pos.placement]
++ I Test (f "$[FVWM_USERDIR]/NsCDE.conf") Exec exec $[infostore.terminal]
++ I Schedule 1640 Prev ($[infostore.terminal]) Move screen c 50-50w 50-16w
++ I Schedule 1640 Prev (*term*,*xvt*) Move screen c 50-50w 50-16w
++ I Schedule 1640 Prev (*xvt*) Move screen c 50-50w 50-16w
+
+# Do not destroy SessionInitFunction, just append to it
+AddToFunc SessionInitFunction
++ I CommonInitFunction
+
+# Executed on restart under X Session Manager, see fvwm(1)
+DestroyFunc SessionRestartFunction
+AddToFunc SessionRestartFunction
++ I SaveSession
+
+# Executed on restart
+# DestroyFunc UserRestartFunction
+# AddToFunc UserRestartFunction
+
+# Executed on X Session Exit, see fvwm(1)
+DestroyFunc SessionExitFunction
+AddToFunc SessionExitFunction
++ I Test (EnvMatch XDG_CURRENT_DESKTOP MATE) SaveSession
++ I Test (EnvMatch XDG_CURRENT_DESKTOP LXDE) SaveSession
++ I Test (EnvMatch XDG_CURRENT_DESKTOP KDE) SaveSession
++ I Test (EnvMatch XDG_CURRENT_DESKTOP GNOME) SaveSession
++ I Echo Session $[XDG_CURRENT_DESKTOP] is over.
+
+# Executed on Quit and Restart
+# Does not wait for Schedule command to finish
+# DestroyFunc ExitFunction
+# AddToFunc ExitFunction
+

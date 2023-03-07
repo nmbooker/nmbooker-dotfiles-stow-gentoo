@@ -1,0 +1,15 @@
+!
+! This file is a part of the NsCDE - Not so Common Desktop Environment
+! Author: Hegel3DReloaded
+! Licence: GPLv3
+!
+
+! ====================
+! XClipboard resources
+! ====================
+
+xclipboard*Background: #989884846565
+xclipboard*Foreground: #ffffffffffff
+xclipboard*geometry: 400x200
+xclipboard.form.text.background: #5a0041003c00
+xclipboard.form.text.borderColor: #81b470a3562f

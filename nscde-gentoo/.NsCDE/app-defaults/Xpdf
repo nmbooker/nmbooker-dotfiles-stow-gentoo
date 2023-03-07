@@ -1,0 +1,10 @@
+!
+! This file is a part of the NsCDE - Not so Common Desktop Environment
+! Author: Hegel3DReloaded
+! Licence: GPLv3
+!
+
+Xpdf.geometry: 940x842+105+6
+Xpdf*matteColor: #81b470a3562f
+Xpdf*initialZoom: width
+Xpdf.win.openDialog_popup.openDialog.background: #6c6c90907171

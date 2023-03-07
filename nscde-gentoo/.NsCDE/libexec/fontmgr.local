@@ -1,0 +1,64 @@
+#!/bin/ksh
+  
+#
+# This file is a part of the NsCDE - Not so Common Desktop Environment
+# Author: Hegel3DReloaded
+# Licence: GPLv3
+#
+
+FontFile="$1"
+if [ -r "$FontFile" ]; then
+   NewMonoFont=$(egrep 'InfoStoreAdd font\.monospaced\.normal\.medium' "$FontFile" | \
+    awk -F'xft:' '{ print $2 }' | awk -F: '{ print $1, $4 }' | sed 's/size=//g;s/"//g')
+   NewFont=$(egrep 'InfoStoreAdd font\.variable\.normal\.medium' "$FontFile" | \
+    awk -F'xft:' '{ print $2 }' | awk -F: '{ print $1, $4 }' | sed 's/size=//g;s/"//g')
+else
+   exit 2
+fi
+
+NewFontName="${NewFont% *}"
+NewFontSize="${NewFont##* }"
+NewMonoFontName="${NewMonoFont% *}"
+NewMonoFontSize="${NewMonoFont##* }"
+
+# mate-terminal
+whence -q mate-terminal
+if (($? == 0)); then
+   if [ -n $NewMonoFont ]; then
+      dconf write /org/mate/terminal/profiles/default/font "'${NewMonoFont}'"
+   fi
+fi
+
+# xfce4-terminal
+whence -q xfce4-terminal
+if (($? == 0)); then
+   if [ -n $NewMonoFont ]; then
+      if [ ! -d "$HOME/.config/xfce4/terminal" ]; then
+         mkdir -p "$HOME/.config/xfce4/terminal"
+      fi
+      ${NSCDE_TOOLSDIR}/confset -c $HOME/.config/xfce4/terminal/terminalrc -s Configuration -k FontName -v "${NewMonoFont}"
+   fi
+fi
+
+# KDE konsole
+whence -q konsole
+if (($? == 0)); then
+   if [ ! -d "$HOME/.local/share/konsole" ]; then
+      mkdir -p "$HOME/.local/share/konsole"
+   fi
+   K_NewMonoFont=$(echo "$NewMonoFont" | $NSCDE_TOOLSDIR/ised -c 's/\(.*\)\ \(.*$\)/\1, \2/g' -o -f -)
+   if [ "x$K_NewMonoFont" != "x" ]; then
+      ${NSCDE_TOOLSDIR}/confset -c $HOME/.local/share/konsole/NsCDE.profile -s Appearance -k Font -v "$K_NewMonoFont"
+   fi
+fi
+
+# Qterminal
+whence -q qterminal
+if (($? == 0)); then
+   if [ ! -d "$HOME/.config/qterminal.org" ]; then
+      mkdir -p "$HOME/.config/qterminal.org"
+   fi
+   ${NSCDE_TOOLSDIR}/confset -c $HOME/.config/qterminal.org/qterminal.ini -s General -k fontFamily -v "${NewMonoFontName}"
+   ${NSCDE_TOOLSDIR}/confset -c $HOME/.config/qterminal.org/qterminal.ini -s General -k fontSize -v "${NewMonoFontSize}"
+fi
+

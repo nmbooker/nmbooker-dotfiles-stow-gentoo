@@ -1,0 +1,51 @@
+/* XPM */
+/*********************************************************************
+*  (c) Copyright 1993, 1994 Hewlett-Packard Company	
+*  (c) Copyright 1993, 1994 International Business Machines Corp.
+*  (c) Copyright 1993, 1994 Sun Microsystems, Inc.
+*  (c) Copyright 1993, 1994 Unix System Labs, Inc., a subsidiary of
+*      Novell, Inc.
+**********************************************************************/
+
+static char * Fdropzn [] = {
+/* width height ncolors cpp [x_hot y_hot] */
+"32 32 5 1 0 0",
+/* colors */
+" 	s none	m none	c none",
+".    s bottomShadowColor m black c #52bc472126d8",
+"X    s selectColor m white c #8bf1785141b4",
+"o    s background    m black c #a4a48d8d4d4d",
+"O    s topShadowColor m white c #d700cca3afce",
+/* pixels */
+"                                ",
+"                                ",
+"                                ",
+"                                ",
+"................................",
+".XoXoXoXoXoXoXoXoXoXoXoXoXoXoXoO",
+".oXoXoXoXoXoXoXoXoXoXoXoXoXoXoXO",
+".Xo..........................XoO",
+".oX.XoXoXoXoXoXoXoXoXoXoXoXoOoXO",
+".Xo.oXoXoXoXoXoXoXoXoXoXoXoXOXoO",
+".oX.XoXoXoXoXoXoXoXoXoXoXoXoOoXO",
+".Xo.oXoXoXoXoXoXoXoXoXoXoXoXOXoO",
+".oX.XoXoXoXoXoXoXoXoXoXoXoXoOoXO",
+".Xo.oXoXoXoXoXoXoXoXoXoXoXoXOXoO",
+".oX.XoXoXoXoXoXoXoXoXoXoXoXoOoXO",
+".Xo.oXoXoXoXoXoXoXoXoXoXoXoXOXoO",
+".oX.XoXoXoXoXoXoXoXoXoXoXoXoOoXO",
+".Xo.oXoXoXoXoXoXoXoXoXoXoXoXOXoO",
+".oX.XoXoXoXoXoXoXoXoXoXoXoXoOoXO",
+".Xo.oXoXoXoXoXoXoXoXoXoXoXoXOXoO",
+".oX.XoXoXoXoXoXoXoXoXoXoXoXoOoXO",
+".Xo.oXoXoXoXoXoXoXoXoXoXoXoXOXoO",
+".oX.XoXoXoXoXoXoXoXoXoXoXoXoOoXO",
+".Xo.OOOOOOOOOOOOOOOOOOOOOOOOOXoO",
+".oXoXoXoXoXoXoXoXoXoXoXoXoXoXoXO",
+".XoXoXoXoXoXoXoXoXoXoXoXoXoXoXoO",
+".OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+"                                ",
+"                                ",
+"                                ",
+"                                ",
+"                                "};

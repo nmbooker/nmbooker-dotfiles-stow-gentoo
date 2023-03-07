@@ -1,0 +1,44 @@
+#!/bin/ksh
+
+#
+# This file is a part of the NsCDE - Not so Common Desktop Environment
+# Author: Hegel3DReloaded
+# Licence: GPLv3
+#
+
+# Do not remove this two variables, otherwise Color Style Manager does not
+# know color number and palette path, and will be unable to do anything
+# useful or meaningful.
+export PPATH="$1"
+export NCOLORS="$2"
+
+# Firefox: fill the path to /home/USER/.mozilla/firefox/profile.xxx if you use it.
+# If empty, thunderbird CSS will not be integrated with NsCDE.
+export FIREFOX_PROFILEDIR=""
+# Firefox version tested are Firefox ESR 78.x.y, Firefox 91, 91.1.0 ESR, 91 and 92.
+# Use "ff7x_" for Firefox 7x and 8x versions, and "ff9x_" for 91, 92 and newer.
+# Default is "ff9x_"
+export FIREFOX_MAJVER_PFX="ff9x_"
+
+# Thunderbird: fill the path to /home/USER/.thunerbird/profile.xxx if you use it.
+# If empty, thunderbird CSS will not be integrated with NsCDE.
+export THUNDERBIRD_PROFILEDIR=""
+
+# All "do_*" functions are working from here, do not remove this if you
+# want to use predefined colormgr addons.
+. ${NSCDE_DATADIR}/config_templates/colormgr.addons
+
+# Defaults: integrate if application is found. Except for
+# Firefox and Thunderbird where profile directories must
+# be explicitly defined by the user.
+whence -q gkrellm && do_gkrellm
+whence -q mate-terminal && do_mate_terminal
+whence -q konsole && do_konsole
+whence -q konsole && do_qterminal
+whence -q xfce4-terminal && do_xfce4_terminal
+whence -q kcalc && do_kcalc
+# do_firefox
+# do_thunderbird
+
+# Add here your own local hooks freely ...
+

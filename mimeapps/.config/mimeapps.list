@@ -1,0 +1,17 @@
+
+[Default Applications]
+inode/directory=rox.desktop
+text/plain=gvim.desktop
+application/x-shellscript=gvim.desktop
+text/english=gvim.desktop
+text/x-c=gvim.desktop
+text/x-c++=gvim.desktop
+text/x-c++hdr=gvim.desktop
+text/x-c++src=gvim.desktop
+text/x-chdr=gvim.desktop
+text/x-csrc=gvim.desktop
+text/x-java=gvim.desktop
+text/x-makefile=gvim.desktop
+text/x-readme=gvim.desktop
+text/x-tcl=gvim.desktop
+text/html=firefox-bin.desktop

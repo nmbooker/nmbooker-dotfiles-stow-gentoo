@@ -1,3 +1,4 @@
+alias g=git
 alias ggadp="git add -p"
 alias ggfp="git fetch --prune"
 alias ggi="git commit"

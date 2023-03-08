@@ -28,8 +28,8 @@ MiscNewTabAdjacent = FALSE
 MiscSearchDialogOpacity = 100
 MiscShowUnsafePasteDialog = TRUE
 MiscRightClickAction = TERMINAL_RIGHT_CLICK_ACTION_CONTEXT_MENU
-ColorBackground = #5a0041003c00
+ColorBackground = #000000000000
 ColorForeground = #ffffffffffff
 ColorSelectionBackground = #ffffffffffff
-ColorSelectionForeground = #5a0041003c00
+ColorSelectionForeground = #000000000000
 

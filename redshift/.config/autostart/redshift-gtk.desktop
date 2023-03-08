@@ -1,0 +1,4 @@
+[Desktop Entry]
+Exec=/usr/bin/redshift-gtk
+Name=redshift-gtk
+Type=Application

@@ -4,3 +4,7 @@ alias ggfp="git fetch --prune"
 alias ggi="git commit"
 alias gglg="git lg"
 alias ggo="git checkout"
+
+# Directory stack
+alias d="dirs -v"
+alias pd="pushd"

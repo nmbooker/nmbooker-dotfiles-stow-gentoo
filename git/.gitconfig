@@ -1,3 +1,6 @@
 [user]
 	email = NMBooker@gmail.com
 	name = Nick Booker
+
+[alias]
+	lg = log --all --graph --pretty=oneline --abbrev-commit

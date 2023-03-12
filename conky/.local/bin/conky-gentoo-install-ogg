@@ -1,0 +1,7 @@
+#!/bin/bash
+set -e
+cd ~/gentoo-install-ogg
+if [[ $(git status --porcelain | wc -l) -gt 0 ]]
+then
+	echo "~/gentoo-install-ogg unclean"
+fi

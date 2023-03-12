@@ -5,3 +5,4 @@
 [alias]
 	lg = log --all --graph --pretty=oneline --abbrev-commit
 	pushf = push --force-with-lease
+	st = status

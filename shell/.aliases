@@ -5,6 +5,7 @@ alias ggi="git commit"
 alias gglg="git lg"
 alias ggo="git checkout"
 alias ggds="git diff --staged"
+alias ggst="git status"
 
 # Directory stack
 alias d="dirs -v"

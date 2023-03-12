@@ -12,3 +12,4 @@ then
 	. "$HOME/.aliases"
 fi
 
+bindkey -e

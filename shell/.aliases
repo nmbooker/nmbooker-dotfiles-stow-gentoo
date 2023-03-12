@@ -4,6 +4,7 @@ alias ggfp="git fetch --prune"
 alias ggi="git commit"
 alias gglg="git lg"
 alias ggo="git checkout"
+alias ggds="git diff --staged"
 
 # Directory stack
 alias d="dirs -v"

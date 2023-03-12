@@ -1,0 +1,7 @@
+#!/bin/bash
+set -e
+cd ~/.dotfiles
+if [[ $(git status --porcelain | wc -l) -gt 0 ]]
+then
+	echo "~/.dotfiles unclean"
+fi

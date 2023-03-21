@@ -1,3 +1,7 @@
+if [ -e /usr/bin/ddate ]
+then
+	ddate >&2
+fi
 autoload -U compinit promptinit
 compinit
 promptinit

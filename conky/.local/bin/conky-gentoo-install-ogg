@@ -4,4 +4,8 @@ cd ~/gentoo-install-ogg
 if [[ $(git status --porcelain | wc -l) -gt 0 ]]
 then
 	echo "~/gentoo-install-ogg unclean"
+elif ! git merge-base --is-ancestor HEAD @{u}
+then
+	# ^ https://stackoverflow.com/a/48354942
+	echo "~/gentoo-install-ogg pushable"
 fi

@@ -1,0 +1,15 @@
+S1,NAME,$[gt.Communications]
+S1,WIDTH,178
+S1,ENABLED,1
+S1,ENTRY,$[gt.Web Browser],,NsCDE/32x32/apps/web-browser.png,nscde_fvwmclnt \"Exec exec $[infostore.browser]\"
+S1,ENTRY,SeaMonkey,,32x32-seamonkey.png,seamonkey 
+S1,ENTRY,Pidgin IM,,hicolor/32x32/apps/pidgin.png,pidgin
+S1,ENTRY,Signal,,hicolor/32x32/apps/signal-desktop.png,signal-desktop
+S1,ENTRY,FileZilla,,hicolor/32x32/apps/filezilla.png,filezilla
+S1,ENTRY,TigerVNC $[gt.Viewer],,hicolor/32x32/apps/tigervnc.png,vncviewer
+S1,ENTRY,$[gt.Remote Viewer],,hicolor/32x32/apps/virt-viewer.png,remote-viewer
+S1,ENTRY,$[gt.Vinagre],,NsCDE/32x32/apps/preferences-desktop-remote-desktop.png,vinagre
+
+S8,NAME,$[gt.Extras]
+S8,WIDTH,160
+S8,ENABLED,0

@@ -4,4 +4,7 @@ cd ~/.dotfiles
 if [[ $(git status --porcelain | wc -l) -gt 0 ]]
 then
 	echo "~/.dotfiles unclean"
+elif ! git merge-base --is-ancestor HEAD @{u}
+then
+	echo "~/.dotfiles pushable"
 fi

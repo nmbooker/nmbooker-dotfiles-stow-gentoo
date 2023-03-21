@@ -8,7 +8,7 @@
   <Option name="dnd_spring_open">0</Option>
   <Option name="toolbar_show_info">1</Option>
   <Option name="display_large_width">155</Option>
-  <Option name="filer_unique_windows">0</Option>
+  <Option name="filer_unique_windows">1</Option>
   <Option name="menu_quick">0</Option>
   <Option name="panel_xinerama">0</Option>
   <Option name="pinboard_bg_colour">#888</Option>

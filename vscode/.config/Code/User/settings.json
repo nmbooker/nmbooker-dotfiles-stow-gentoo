@@ -3,5 +3,8 @@
     "[python]": {
         "editor.formatOnType": true
     },
-    "editor.fontSize": 10
+    "editor.fontSize": 10,
+    "editor.rulers": [
+        72, 80, 88
+    ]
 }

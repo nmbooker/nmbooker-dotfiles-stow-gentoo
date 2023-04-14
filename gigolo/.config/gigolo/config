@@ -1,5 +1,5 @@
 [general]
-file_manager=rox
+file_manager=rox-gvfs
 terminal=xfce4-terminal
 autoconnect_interval=60
 

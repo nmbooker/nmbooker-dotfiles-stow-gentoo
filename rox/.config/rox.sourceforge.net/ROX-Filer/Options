@@ -41,7 +41,7 @@
   <Option name="label_font"></Option>
   <Option name="filer_short_flag_names">0</Option>
   <Option name="xattr_show">1</Option>
-  <Option name="display_dirs_first">0</Option>
+  <Option name="display_dirs_first">1</Option>
   <Option name="pinboard_clamp_icons">1</Option>
   <Option name="menu_iconsize">1</Option>
   <Option name="blackbox_hack">0</Option>

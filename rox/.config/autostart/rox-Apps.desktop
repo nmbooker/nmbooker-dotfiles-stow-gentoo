@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=/usr/bin/rox /home/nick/Apps
+Name=rox-Apps
+Comment=~/Apps in rox, a simple graphical file manager
+Type=Application

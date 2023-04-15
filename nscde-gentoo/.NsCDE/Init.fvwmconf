@@ -25,6 +25,7 @@ AddToFunc InitFunction
 + I Schedule 1640 Prev ($[infostore.terminal]) Move screen c 50-50w 50-16w
 + I Schedule 1640 Prev (*term*,*xvt*) Move screen c 50-50w 50-16w
 + I Schedule 1640 Prev (*xvt*) Move screen c 50-50w 50-16w
++ I Schedule 15000 Exec exec /usr/bin/conky
 
 # Do not destroy SessionInitFunction, just append to it
 AddToFunc SessionInitFunction

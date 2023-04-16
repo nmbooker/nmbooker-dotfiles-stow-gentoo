@@ -25,7 +25,8 @@ AddToFunc InitFunction
 + I Schedule 1640 Prev ($[infostore.terminal]) Move screen c 50-50w 50-16w
 + I Schedule 1640 Prev (*term*,*xvt*) Move screen c 50-50w 50-16w
 + I Schedule 1640 Prev (*xvt*) Move screen c 50-50w 50-16w
-+ I Schedule 1640 Prev (Rox,"~/Apps") Move screen c 90-100w 16-50w
++ I Schedule 1640 Prev (Rox,"~/Apps") Move screen c 90-100w 10
+	# ^ This should be the Rox ~/Apps window that's loaded by autostart
 + I Schedule 15000 Exec exec /usr/bin/conky
 # x = 90-100w means put the right hand side of the window 90% across screen (near the right hand side).
 #   This is how it does it:

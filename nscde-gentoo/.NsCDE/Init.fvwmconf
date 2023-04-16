@@ -25,7 +25,16 @@ AddToFunc InitFunction
 + I Schedule 1640 Prev ($[infostore.terminal]) Move screen c 50-50w 50-16w
 + I Schedule 1640 Prev (*term*,*xvt*) Move screen c 50-50w 50-16w
 + I Schedule 1640 Prev (*xvt*) Move screen c 50-50w 50-16w
++ I Schedule 1640 Prev (Rox) Move screen c 90-100w 16-50w
 + I Schedule 15000 Exec exec /usr/bin/conky
+# x = 90-100w means put the right hand side of the window 90% across screen (near the right hand side).
+#   This is how it does it:
+#   Window is positioned by top-left corner, so you compute where the top-left
+#   corner should be in reference
+#     for x, to the width of the screen and the width of the window (suffix w)
+#     for y, to the height of the screen and the height of the window (suffix w)
+#   For x, initial 90 means 90% of screen side counted from left hand side
+#   -100w means subtract 100% of the window's width (thereby positioning the right hand side of the window instead)
 
 # Do not destroy SessionInitFunction, just append to it
 AddToFunc SessionInitFunction

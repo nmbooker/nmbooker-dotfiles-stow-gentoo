@@ -21,6 +21,11 @@ AddToFunc InitFunction
 + I Test (x gkrellm) Exec exec gkrellm
 + I Test (x gkrellm) Wait gkrellm
 + I Test (x gkrellm) Schedule 500 All (Gkrellm) Move screen p $[infostore.gkrellm.pos.placement]
++ I Test (x wmudmount) Exec exec wmudmount --non-wmaker
++ I Test (x wmudmount) Wait wmudmount
++ I Test (x wmudmount) Schedule 500 Prev (DockApp,"wmudmount") Move screen c 0 100-100w
+	# ^ x = 0: Left hand side at left hand side of screen
+	# ^ y = 100-100w: Bottom at bottom of screen
 + I Test (f "$[FVWM_USERDIR]/NsCDE.conf") Exec exec $[infostore.terminal]
 + I Schedule 1640 Prev ($[infostore.terminal]) Move screen c 50-50w 50-16w
 + I Schedule 1640 Prev (*term*,*xvt*) Move screen c 50-50w 50-16w

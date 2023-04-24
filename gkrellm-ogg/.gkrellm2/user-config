@@ -26,7 +26,7 @@ clock_cal cal_tooltip
 clock_cal hour_chime_command 
 clock_cal quarter_chime_command 
 clock_cal loop_chime_enable 0
-clock_cal clock_options 0
+clock_cal clock_options 1
 clock_cal cal_options 1
 clock_cal cal_format %a <span foreground="$A"><big><big>%e</big></big></span> %b
 clock_cal clock_format %l:%M <span foreground="$A"><small>%S</small></span>

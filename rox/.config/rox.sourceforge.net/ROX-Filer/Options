@@ -34,7 +34,7 @@
   <Option name="filer_beep_fail">1</Option>
   <Option name="bind_single_pinboard">1</Option>
   <Option name="display_file_colour">#000000</Option>
-  <Option name="filer_change_size_num">30</Option>
+  <Option name="filer_change_size_num">10</Option>
   <Option name="display_show_headers">1</Option>
   <Option name="iconify_start">1</Option>
   <Option name="display_dir_colour">#000080</Option>
